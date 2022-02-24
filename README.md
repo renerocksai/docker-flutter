@@ -1,8 +1,21 @@
 # docker-flutter
 
-With this docker image you don't need to install the Flutter and Android SDK on your developer machine. Everything is ready to use inclusive an emulator device (Pixel with Android 9). With a shell alias you won't recognize a difference between the image and a local installation. If you are using VSCode you can also use this image as your devcontainer.
+This is work in progress. The rest of this README does not fully apply.
+
+So far, I have updated stable/Dockerfile etc. to create a flutter-docker container including nvim and flutter-tools for
+nvim.
+
+Unfortunately, most recent 2.10 releases of flutter fail to install due to some bug that thinks the flutter command is
+being executed within a flutter project and complains about some Android XML stuff.
+
+I will test just performing a flutter upgrade, ... after version 2.2.1 which is currently intstalled into the
+container.
+
+---
 
 # WIP
+
+With this docker image you don't need to install the Flutter and Android SDK on your developer machine. Everything is ready to use inclusive an emulator device (Pixel with Android 9). With a shell alias you won't recognize a difference between the image and a local installation. If you are using VSCode you can also use this image as your devcontainer.
 
 ## Supported tags
 
