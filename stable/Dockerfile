@@ -68,6 +68,7 @@ RUN tar xf flutter.tar.xz -C /home/$USER
 RUN rm flutter.tar.xz 
 RUN flutter config --no-analytics 
 RUN yes "y" | flutter doctor --android-licenses
+RUN flutter upgrade
 RUN flutter precache
 RUN flutter doctor
 RUN flutter emulators --create
