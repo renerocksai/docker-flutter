@@ -2,14 +2,15 @@
 
 This is work in progress. The rest of this README does not fully apply.
 
-So far, I have updated stable/Dockerfile etc. to create a flutter-docker container including nvim and flutter-tools for
+So far, I have updated stable/Dockerfile etc. to create a `flutter-stable` docker container including nvim and flutter-tools for
 nvim.
+
+Build the container via `./build_flutter-stable.sh`.
 
 Unfortunately, most recent 2.10 releases of flutter fail to install due to some bug that thinks the flutter command is
 being executed within a flutter project and complains about some Android XML stuff.
 
-I will test just performing a flutter upgrade, ... after version 2.2.1 which is currently intstalled into the
-container.
+So, as a workaround, I install flutter 2.2.1 and perform a `flutter upgrade` afterwards. This works like a charm 😊!
 
 ---
 
