@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t flutter-stable stable
+docker build -t ghcr.io/renerocksai/flutter-nvim-stable stable

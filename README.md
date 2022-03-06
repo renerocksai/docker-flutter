@@ -7,6 +7,8 @@ flutter-tools for nvim.
 
 Build the container via `./build_flutter-stable.sh`.
 
+Or `docker pull ghcr.io/renerocksai/flutter-nvim-stable`.
+
 Unfortunately, most recent 2.10 releases of flutter fail to install due to some bug that thinks the flutter command is
 being executed within a flutter project and complains about some Android XML stuff.
 
@@ -20,11 +22,18 @@ With this docker image you don't need to install the Flutter and Android SDK on 
 ready to use inclusive an emulator device (Pixel with Android 9). With a shell alias you won't recognize a difference
 between the image and a local installation. If you are using VSCode you can also use this image as your devcontainer.
 
+## Github Container Registry
+
+A GitHub action is in place that builds and pushes the `stable` container to ghcr.
+
 ## Start the container
 
 See `./start-docker.sh`. It's a Linux example startup script to run your container with starting an emulator in mind.
 
 From within the container, I recommend starting a `tmux` session, so you can split nvim and a shell.
+
+Also, please run `flutter pub get` in your app directory every time you (re-) start the container - as flutter's cache
+dirs will be reset. Might be improved in the future
 
 Run `flutter-android-emulator.sh` to start an emulator (on Linux).  After that, just `flutter run` from your flutter
 project directory.
