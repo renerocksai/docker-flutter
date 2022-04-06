@@ -26,7 +26,7 @@ ENV PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$ANDROID_SDK_ROOT/emulator:$
 ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update \
   && apt-get install --yes --no-install-recommends openjdk-$JAVA_VERSION-jdk curl unzip sed git bash xz-utils libglvnd0 ssh xauth x11-xserver-utils libpulse0 libxcomposite1 libgl1-mesa-glx sudo \
-  neovim stow tmux ninja-build gettext libtool libtool-bin build-essential autoconf automake cmake g++ pkg-config unzip curl doxygen \
+  neovim stow tmux ninja-build ripgrep gettext libtool libtool-bin build-essential autoconf automake cmake g++ pkg-config unzip curl doxygen \
   && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 # create user
