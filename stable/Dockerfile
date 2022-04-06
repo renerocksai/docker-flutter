@@ -84,4 +84,4 @@ ENTRYPOINT [ "/usr/local/bin/inside.sh" ]
 RUN nvim --headless +TSUpdateSync +qa
 RUN cd renerocksai.stow && stow fonts && fc-cache -fv && cd ..
 RUN echo 'alias tmux="tmux -2 -u"' >> .bashrc
-RUN cd renerocksai.stow && git pull && cd ..
+RUN cd renerocksai.stow && git pull && stow login && rm -fr ssh alacritty bin desktop-shortcuts i3 kitty language-servers neomutt nix nixos && cd ..

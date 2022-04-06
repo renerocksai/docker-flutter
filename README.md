@@ -1,9 +1,9 @@
 # docker-flutter
 
-This is work in progress. The rest of this README does not fully apply.
+This is work in progress. The remaining (WIP) sections of this README do not fully apply.
 
 So far, I have updated stable/Dockerfile etc. to create a `flutter-stable` docker container including nvim and
-flutter-tools for nvim.
+flutter-tools for nvim. Nvim comes fully equipped with telescope, harpoon and stuff (from my stowed dotfiles).
 
 Build the container via `./build_flutter-stable.sh`.
 
@@ -17,6 +17,8 @@ So, as a workaround, I install flutter 2.2.1 and perform a `flutter upgrade` aft
 ---
 
 # WIP
+
+## This is from the original's (forked repo) README
 
 With this docker image you don't need to install the Flutter and Android SDK on your developer machine. Everything is
 ready to use inclusive an emulator device (Pixel with Android 9). With a shell alias you won't recognize a difference
