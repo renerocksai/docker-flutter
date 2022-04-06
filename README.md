@@ -2,10 +2,10 @@
 
 This is work in progress. The remaining (WIP) sections of this README do not fully apply.
 
-So far, I have updated stable/Dockerfile etc. to create a `flutter-stable` docker container including nvim and
-flutter-tools for nvim. Nvim comes fully equipped with telescope, harpoon and stuff (from my stowed dotfiles).
+So far, I have updated stable/Dockerfile etc. to create a `ghcr.io/renerocksai/flutter-nvim-stable` docker container
+including nvim and flutter-tools for nvim. Nvim also comes fully equipped with telescope, harpoon and stuff.
 
-Build the container via `./build_flutter-stable.sh`.
+Build the container via `./build_flutter-nvim-stable.sh`.
 
 Or `docker pull ghcr.io/renerocksai/flutter-nvim-stable`.
 
@@ -13,6 +13,18 @@ Unfortunately, most recent 2.10 releases of flutter fail to install due to some 
 being executed within a flutter project and complains about some Android XML stuff.
 
 So, as a workaround, I install flutter 2.2.1 and perform a `flutter upgrade` afterwards. This works like a charm 😊!
+
+## Start the container
+
+See `./start-docker.sh`. It's a Linux example startup script to run your container with starting an emulator in mind.
+
+From within the container, I recommend starting a `tmux` session, so you can split nvim and a shell.
+
+Also, please run `flutter pub get` in your app directory every time you (re-) start the container - as flutter's cache
+dirs will be reset. Might be improved in the future
+
+Run `flutter-android-emulator.sh` to start an emulator (on Linux).  After that, just `flutter run` from your flutter
+project directory.
 
 ---
 
